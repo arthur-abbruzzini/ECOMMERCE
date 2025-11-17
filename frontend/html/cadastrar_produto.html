@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/progCadastrarProduto.js" defer></script>
+    <title>Sistema Restaurante - Cadastrar Produto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Principal</a>
+            <a href="./cadastrar_cliente.html">Cadastrar Cliente</a>
+            <a href="./cadastrar_prato.html">Cadastrar Prato</a>
+            <a href="./logout.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cadastrar Produto</h1>
+        <br>
+        <form id="formCadastrarProduto">
+
+            <label for="nome">Nome do Produto:</label><br>
+            <input type="text" id="nome" placeholder="Nome" required><br>
+
+            <label for="descricao">Descrição:</label><br>
+            <textarea id="descricao" placeholder="Descrição do produto"></textarea><br>
+
+            <label for="modelo">Modelo:</label><br>
+            <input type="text" id="modelo" placeholder="Modelo" required><br>
+
+            <label for="preco">Preço:</label><br>
+            <input type="number" id="preco" placeholder="0.00" step="0.01" required><br>
+
+            <label for="imagem_url">URL da Imagem:</label><br>
+            <input type="text" id="imagem_url" placeholder="http://..."><br>
+
+            <label for="ativo">Produto Ativo?</label><br>
+            <select id="ativo" required>
+                <option value="true" selected>Sim</option>
+                <option value="false">Não</option>
+            </select><br><br>
+
+            <button type="submit" id="btnCadastrarProduto">Cadastrar</button><br><br>
+        </form>
+
+        <div id="res"></div>
+        <br><br>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>

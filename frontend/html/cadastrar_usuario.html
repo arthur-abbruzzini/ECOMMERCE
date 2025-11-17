@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/progCadastrar.js" defer></script>
+    <title>Sistema Restaurante - Cadastrar Usuário</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Principal</a>
+            <a href="./cadastrar_cliente.html">Cadastrar Cliente</a>
+            <a href="./cadastrar_prato.html">Cadastrar Prato</a>
+            <a href="./logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Usuário</h1>
+        <br>
+        <form id="formCadastrar">
+            <label for="nome">Digite seu Nome:</label><br>
+            <input type="text" id="nome" placeholder="Nome" required><br>
+
+            <label for="telefone">Digite seu Telefone:</label><br>
+            <input type="text" id="telefone" placeholder="Telefone" required><br>
+
+            <label for="email">Digite seu Email:</label><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+
+            <label for="senha">Digite sua Senha:</label><br>
+            <input type="password" id="senha" placeholder="Senha" required><br>
+
+            <label for="cpf">Digite seu CPF:</label><br>
+            <input type="text" id="cpf" placeholder="123.456.789-10" required><br>
+
+            <label for="identidade">Digite sua Identidade (RG):</label><br>
+            <input type="text" id="identidade" placeholder="RG"><br>
+
+            <label for="tipo_usuario">Tipo de Usuário:</label><br>
+            <select id="tipo_usuario" required>
+                <option value="CLIENTE" selected>Cliente</option>
+                <option value="ADMIN">Admin</option>
+            </select><br><br>
+
+            <button type="submit" id="btnCadastrar">Cadastrar</button><br><br>
+        </form>
+
+        <div id="res"></div>
+        <br><br>
+    </main>
+
+    <footer>
+       
+    </footer>
+</body>
+</html>
