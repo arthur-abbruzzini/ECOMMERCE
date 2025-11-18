@@ -6,24 +6,16 @@ const {
     Produto, 
     ItemPedido, 
     Entrega, 
-    Endereco, 
-    Estoque,
-    Compra,
-    Pagamento,
-    ItensCompra,
-    CategoriaProduto,
-    Fornecedor,
-    ProdutoFornecedor
+    Estoque 
 } = require('./models/rel') 
 
 async function syncDataBase(){
     try{
-        // Usando { alter: true } para fazer alterações no banco sem perder dados
-        await conn.sync({ alter: true }) 
+        await conn.sync({ force: true }) 
         
-        console.log('-------------------------------------------')
-        console.log('Banco de Dados sincronizado (13 Entidades)!')
-        console.log('-------------------------------------------')
+        console.log('----------------------------')
+        console.log('Banco de Dados sincronizado!')
+        console.log('----------------------------')
 
     }catch(err){
         console.error('ERRO: Não foi possível sincronizar o banco de dados!', err)

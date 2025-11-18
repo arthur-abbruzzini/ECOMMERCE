@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize')
-const db = require('../db/conn')
+const db = require('../db/conn') 
 
 const Pedido = db.define('pedido',{
     codPedido: {
@@ -7,20 +7,12 @@ const Pedido = db.define('pedido',{
         primaryKey: true,
         autoIncrement: true
     },
-    idUsuario: {
+    idUsuario: { 
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'usuarios', 
             key: 'codUsuario'  
-        }
-    },
-    idEndereco: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-            model: 'enderecos', 
-            key: 'codEndereco'  
         }
     },
     dataPedido: {
@@ -29,15 +21,7 @@ const Pedido = db.define('pedido',{
         defaultValue: DataTypes.NOW
     },
     status: {
-        type: DataTypes.ENUM(
-            'PENDENTE_PAGAMENTO', 
-            'PROCESSANDO_PAGAMENTO', 
-            'PAGO', 
-            'SEPARACAO_ESTOQUE', 
-            'ENVIADO', 
-            'ENTREGUE', 
-            'CANCELADO'
-        ),
+        type: DataTypes.ENUM('PENDENTE_PAGAMENTO', 'PAGO', 'ENVIADO', 'ENTREGUE', 'CANCELADO'),
         allowNull: false,
         defaultValue: 'PENDENTE_PAGAMENTO'
     },
@@ -55,17 +39,7 @@ const Pedido = db.define('pedido',{
         type: DataTypes.DECIMAL(10,2), 
         allowNull: false,
         defaultValue: 0.00
-    },
-    metodoPagamento: {
-    type: DataTypes.ENUM(
-        'CARTAO_CREDITO', 
-        'PIX',          
-        'BOLETO',
-        'DEBITO_ONLINE',
-        'CARTEIRA_DIGITAL' // Opcional para cobrir PayPal/Mercado Pago, etc.
-    ),
-    allowNull: true
-}
+    }
 },{
     timestamps: true,
     tableName: 'pedidos'
