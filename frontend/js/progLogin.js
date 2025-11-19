@@ -1,5 +1,4 @@
 let res = document.getElementById('res')
-
 let btnLogin = document.getElementById('btnLogin')
 
 btnLogin.addEventListener('click', (e) => {
@@ -23,9 +22,21 @@ btnLogin.addEventListener('click', (e) => {
         .then(resp => resp.json())
         .then(dados => {
             console.log(dados)
-            console.log(dados.token)
 
+            // SE DER ERRO NO LOGIN
+            if (dados.error) {
+                res.innerText = dados.error
+                return
+            }
+
+            // SE LOGIN DER CERTO
             sessionStorage.setItem('token', dados.token)
+            res.innerText = "Login realizado com sucesso!"
+
+            // 🔥 REDIRECIONA PARA A LOJA
+            setTimeout(() => {
+                location.href = "./html/loja.html"
+            }, 800)
         })
         .catch((err) => {
             console.error('Erro ao realizar login', err)

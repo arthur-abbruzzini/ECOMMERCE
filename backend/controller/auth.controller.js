@@ -22,7 +22,7 @@ const login = async (req, res) => {
 
         const token = gerarToken({
             codUsuario: usuarioEncontrado.codUsuario,
-            email: usuarioEncontrado.email   // <---- CORRIGIDO
+            email: usuarioEncontrado.email   // <-- CORRIGIDO AQUI
         })
 
         res.status(200).json({ message: "Login realizado com sucesso!", token })

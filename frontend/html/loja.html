@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/progAdd.js" defer></script>
+    <title>Loja de Carros Velhos</title>
+</head>
+<body>
+   
+    <!-- Cabeçalho -->
+    <header class="menu">
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../html/carrinho.html">Carrinho</a>
+            <a href="../html/index.html"><button id="btnLogout">Sair</button></a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="cont_grid">
+
+            <!-- Conteúdo principal -->
+            <main class="grade-produtos">
+
+                <article class="produto">
+                    <figure>
+                        <img src="../img/IMG_fusca1.webp" alt="fusca 1996">
+                        <figcaption>fusca 1996</figcaption>
+                    </figure>
+                    <div class="controle-produto">
+                        <input type="number" id="qtde1" min="1" value="1" class="input-qtde">
+                        <button id="btn1"
+                            data-nome="fusca 1996"
+                            data-preco="5999.90"
+                            data-codprod="1">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <figure>
+                        <img src="../img/chevette1.jpg" alt="chevette 1992">
+                        <figcaption>chevette 1992</figcaption>
+                    </figure>
+                    <div class="controle-produto">
+                        <input type="number" id="qtde2" min="1" value="1" class="input-qtde">
+                        <button id="btn2"
+                            data-nome="chevette 1992"
+                            data-preco="7999.00"
+                            data-codprod="2">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <figure>
+                        <img src="../img/camaro1.webp" alt="camaro 1969">
+                        <figcaption>camaro 1969</figcaption>
+                    </figure>
+                    <div class="controle-produto">
+                        <input type="number" id="qtde3" min="1" value="1" class="input-qtde">
+                        <button id="btn3"
+                            data-nome="camaro 1969"
+                            data-preco="4999.99"
+                            data-codprod="3">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <figure>
+                        <img src="../img/porsche1.webp" alt="porsche 1974">
+                        <figcaption>porsche 1974</figcaption>
+                    </figure>
+                    <div class="controle-produto">
+                        <input type="number" id="qtde4" min="1" value="1" class="input-qtde">
+                        <button id="btn4"
+                            data-nome="porsche 1974"
+                            data-preco="14999.99"
+                            data-codprod="4">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos</p>
+    </footer>
+
+</body>
+</html>
