@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/progAdd.js" defer></script>
+    <title>Camaro 1969 - OldCar</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="../loja.html">Voltar à Loja</a>
+        </nav>
+    </header>
+    <main>
+        <div class="produto-detalhe">
+            <figure>
+                <img id="productImage" src="../../img/camaro1.webp" alt="camaro 1969">
+                <figcaption>Camaro 1969</figcaption>
+                <div class="image-nav">
+                    <button onclick="prevImage()">Anterior</button>
+                    <button onclick="nextImage()">Próximo</button>
+                </div>
+            </figure>
+            <div class="info-produto">
+                <h2>Camaro 1969</h2>
+                <p>Preço: R$ 4999.99</p>
+                <div class="controle-produto">
+                    <input type="number" id="qtde3" min="1" value="1" class="input-qtde">
+                    <button id="btn3"
+                        data-nome="camaro 1969"
+                        data-preco="4999.99"
+                        data-codprod="3">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/produto3.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos</p>
+    </footer>
+</body>
+</html>
