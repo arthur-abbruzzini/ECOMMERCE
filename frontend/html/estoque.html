@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estoque.css">
+    <script src="../js/estoque.js" defer></script>
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="./admin.html">Voltar ao Painel</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Controle de Estoque</h2>
+        <button id="btnCarregarEstoque">Carregar Estoque</button>
+        <div id="estoqueContainer">
+            <table id="tabelaEstoque">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade em Estoque</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="estoqueBody">
+                    <!-- Dados serão carregados dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos - Admin</p>
+    </footer>
+</body>
+</html>

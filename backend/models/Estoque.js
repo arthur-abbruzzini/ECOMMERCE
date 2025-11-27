@@ -7,28 +7,36 @@ const Estoque = db.define('estoque',{
         primaryKey: true,
         autoIncrement: true
     },
-    idProduto: { 
+    idUsuario: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        unique: true, // Garante o relacionamento 1:1
+        allowNull: true, // Pode ser null para movimentações automáticas
         references: {
-            model: 'produtos', 
-            key: 'codProduto'  
+            key: 'codUsuario',
+            model: 'usuarios'
         }
     },
-    quantidade_atual: {
+    idProduto: {
         type: DataTypes.INTEGER,
-        allowNull: true,
-        defaultValue: 0 // Saldo atual do item no estoque
+        allowNull: false,
+        references: {
+            key: 'codProduto',
+            model: 'produtos'
+        }
     },
-    quantidade_minima: {
+    data: {
+        type: DataTypes.DATEONLY,  // somente data
+        allowNull: false,
+    },
+    tipo: {
+        type: DataTypes.ENUM('ENTRADA','SAIDA'),
+        allowNull: false
+    },
+    qtdeMovimento: {
         type: DataTypes.INTEGER,
-        allowNull: true,
-        defaultValue: 0 // Quantidade mínima
+        allowNull: false
     }
 },{
-    // ALTERADO: Manter timestamps (createdAt e updatedAt) é útil para auditoria do estoque
-    timestamps: true, 
+    timestamps: false,
     tableName: 'estoques'
 })
 

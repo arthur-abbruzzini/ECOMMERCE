@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/progAdmin.js" defer></script>
+    <title>Painel Admin</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="./loja.html">Voltar à Loja</a>
+            <a href="./estoque.html">Ver Estoque</a>
+            <a href="./logout.html"><button id="btnLogout">Sair</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Painel de Administração</h2>
+
+        <section class="admin-section">
+            <h3>Gerenciar Produtos</h3>
+            <ul class="admin-list">
+                <li><a href="./admin/produtos/cadastrar.html" class="admin-link">Cadastrar Produto</a></li>
+                <li><a href="./admin/produtos/listar.html" class="admin-link">Listar Produtos</a></li>
+                <li><a href="./admin/produtos/atualizar.html" class="admin-link">Atualizar Produto</a></li>
+                <li><a href="./admin/produtos/apagar.html" class="admin-link">Apagar Produto</a></li>
+            </ul>
+        </section>
+
+        <section class="admin-section">
+            <h3>Gerenciar Usuários</h3>
+            <ul class="admin-list">
+                <li><a href="./admin/usuarios/cadastrar.html" class="admin-link">Cadastrar Usuário</a></li>
+                <li><a href="./admin/usuarios/listar.html" class="admin-link">Listar Usuários</a></li>
+                <li><a href="./admin/usuarios/atualizar.html" class="admin-link">Atualizar Usuário</a></li>
+                <li><a href="./admin/usuarios/apagar.html" class="admin-link">Apagar Usuário</a></li>
+            </ul>
+        </section>
+
+        <section class="admin-section">
+            <h3>Gerenciar Pedidos</h3>
+            <ul class="admin-list">
+                <li><a href="./admin/pedidos.html" class="admin-link">Gerenciar Pedidos</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos - Admin</p>
+    </footer>
+</body>
+</html>

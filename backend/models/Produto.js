@@ -24,8 +24,13 @@ const Produto = db.define('produto',{
         allowNull: false
     },
     imagem_url: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.STRING,
         allowNull: true
+    },
+    estoque: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
     },
     ativo: {
         type: DataTypes.BOOLEAN,

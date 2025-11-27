@@ -33,9 +33,13 @@ btnLogin.addEventListener('click', (e) => {
             sessionStorage.setItem('token', dados.token)
             res.innerText = "Login realizado com sucesso!"
 
-            // 🔥 REDIRECIONA PARA A LOJA
+            // 🔥 REDIRECIONA BASEADO NO TIPO DE USUARIO
             setTimeout(() => {
-                location.href = "./html/loja.html"
+                if (dados.tipo_usuario === 'ADMIN') {
+                    location.href = "./html/admin.html"
+                } else {
+                    location.href = "./html/loja.html"
+                }
             }, 800)
         })
         .catch((err) => {

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        form {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ffc107;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0a800;
+        }
+    </style>
+    <script src="../../../js/admin/usuarios/atualizar.js" defer></script>
+    <title>Atualizar Usuário</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="../admin.html">Voltar ao Painel</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Atualizar Usuário</h2>
+        <form id="formAtualizar">
+            <label for="codUsuario">Código do Usuário:</label>
+            <input type="number" id="codUsuario" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf">
+
+            <label for="identidade">RG:</label>
+            <input type="text" id="identidade">
+
+            <label for="tipo_usuario">Tipo:</label>
+            <select id="tipo_usuario">
+                <option value="CLIENTE">Cliente</option>
+                <option value="ADMIN">Admin</option>
+            </select>
+
+            <button type="submit">Atualizar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos - Admin</p>
+    </footer>
+</body>
+</html>

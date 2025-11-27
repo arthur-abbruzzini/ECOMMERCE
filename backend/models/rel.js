@@ -72,17 +72,30 @@ ItemPedido.belongsTo(Produto, {
     as: 'produtoItem' 
 })
 
-// PRODUTO <-> ESTOQUE (1:1)
-Produto.hasOne(Estoque, { 
-    foreignKey: 'idProduto', 
-    as: 'estoqueProduto', 
-    onDelete: 'CASCADE', 
-    onUpdate: 'CASCADE' 
+// PRODUTO <-> ESTOQUE (1:N - Movimentações)
+Produto.hasMany(Estoque, {
+    foreignKey: 'idProduto',
+    as: 'movimentacoesEstoque',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
 })
 
-Estoque.belongsTo(Produto, { 
-    foreignKey: 'idProduto', 
-    as: 'produtoEstoque' 
+Estoque.belongsTo(Produto, {
+    foreignKey: 'idProduto',
+    as: 'produtoEstoque'
+})
+
+// USUARIO <-> ESTOQUE (1:N - Movimentações)
+Usuario.hasMany(Estoque, {
+    foreignKey: 'idUsuario',
+    as: 'movimentacoesUsuario',
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE'
+})
+
+Estoque.belongsTo(Usuario, {
+    foreignKey: 'idUsuario',
+    as: 'usuarioEstoque'
 })
 
 

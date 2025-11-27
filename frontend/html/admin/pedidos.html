@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pedidos.css">
+    <script src="../../js/admin/pedidos.js" defer></script>
+    <title>Gerenciar Pedidos</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="../admin.html">Voltar ao Painel</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gerenciar Pedidos</h2>
+
+        <section class="pedidos-section">
+            <h3>Lista de Pedidos</h3>
+            <button id="btnCarregarPedidos">Carregar Pedidos</button>
+            <div id="pedidosContainer">
+                <table id="tabelaPedidos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Valor Total</th>
+                            <th>Entrega</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pedidosBody">
+                        <!-- Pedidos serão carregados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para atualizar pedido -->
+    <div id="modalPedido" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Atualizar Pedido</h3>
+            <form id="formAtualizarPedido">
+                <input type="hidden" id="pedidoId">
+                <div class="form-group">
+                    <label for="statusPedido">Status do Pedido:</label>
+                    <select id="statusPedido" required>
+                        <option value="PENDENTE_PAGAMENTO">Pendente de Pagamento</option>
+                        <option value="PAGO">Pago</option>
+                        <option value="ENVIADO">Enviado</option>
+                        <option value="ENTREGUE">Entregue</option>
+                        <option value="CANCELADO">Cancelado</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-action btn-atualizar">Atualizar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para atualizar entrega -->
+    <div id="modalEntrega" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalEntrega">&times;</span>
+            <h3>Atualizar Entrega</h3>
+            <form id="formAtualizarEntrega">
+                <input type="hidden" id="entregaId">
+                <div class="form-group">
+                    <label for="statusEntrega">Status da Entrega:</label>
+                    <select id="statusEntrega" required>
+                        <option value="EM_TRANSITO">Em Trânsito</option>
+                        <option value="SAIU_PARA_ENTREGA">Saiu para Entrega</option>
+                        <option value="ENTREGUE">Entregue</option>
+                        <option value="EXTRAVIADO">Extraviado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="codigoRastreio">Código de Rastreio:</label>
+                    <input type="text" id="codigoRastreio">
+                </div>
+                <div class="form-group">
+                    <label for="dataEstimada">Data Estimada (AAAA-MM-DD):</label>
+                    <input type="date" id="dataEstimada">
+                </div>
+                <button type="submit" class="btn-action btn-entrega">Atualizar Entrega</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos - Admin</p>
+    </footer>
+</body>
+</html>

@@ -22,10 +22,11 @@ const login = async (req, res) => {
 
         const token = gerarToken({
             codUsuario: usuarioEncontrado.codUsuario,
-            email: usuarioEncontrado.email   // <-- CORRIGIDO AQUI
+            email: usuarioEncontrado.email,
+            tipo_usuario: usuarioEncontrado.tipo_usuario
         })
 
-        res.status(200).json({ message: "Login realizado com sucesso!", token })
+        res.status(200).json({ message: "Login realizado com sucesso!", token, tipo_usuario: usuarioEncontrado.tipo_usuario })
 
     } catch (err) {
         console.error(err)

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        form {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script src="../../../js/admin/produtos/cadastrar.js" defer></script>
+    <title>Cadastrar Produto</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="../admin.html">Voltar ao Painel</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastrar Produto</h2>
+        <form id="formCadastrar">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" required>
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" required>
+
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" step="0.01" required>
+
+            <label for="estoque">Estoque:</label>
+            <input type="number" id="estoque" required>
+
+            <label for="imagem_url">URL da Imagem:</label>
+            <input type="text" id="imagem_url" placeholder="ex: IMG_fusca1.webp">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos - Admin</p>
+    </footer>
+</body>
+</html>

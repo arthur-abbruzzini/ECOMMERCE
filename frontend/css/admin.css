@@ -1,0 +1,25 @@
+.admin-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.admin-list {
+    list-style: none;
+    padding: 0;
+}
+.admin-list li {
+    margin: 0.5rem 0;
+}
+.admin-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.admin-link:hover {
+    background-color: #0056b3;
+}

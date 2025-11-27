@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/entrega.css">
+    <script src="../js/entrega.js" defer></script>
+    <title>Informações de Entrega</title>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="./loja.html">Voltar à Loja</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Informações de Entrega</h2>
+
+        <div id="resumoCarrinho" class="resumo-carrinho">
+            <!-- Resumo do carrinho será carregado aqui -->
+        </div>
+
+        <form id="formEntrega" class="entrega-form">
+            <div class="form-group cep-group">
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+                </div>
+                <button type="button" id="btnBuscarCep">Buscar</button>
+            </div>
+
+            <div class="form-group">
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" required>
+            </div>
+
+            <div class="form-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" placeholder="Opcional">
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="localidade">Cidade:</label>
+                <input type="text" id="localidade" required>
+            </div>
+
+            <div class="form-group">
+                <label for="uf">Estado:</label>
+                <input type="text" id="uf" maxlength="2" required>
+            </div>
+
+            <button type="submit" class="btn-finalizar">Finalizar Compra</button>
+            <button type="button" id="btnVoltarCarrinho" class="btn-voltar">Voltar ao Carrinho</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Carros Velhos</p>
+    </footer>
+</body>
+</html>
