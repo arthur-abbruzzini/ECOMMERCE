@@ -34,6 +34,7 @@ app.post('/produto', produtoController.cadastrar)
 app.get('/produto', produtoController.listar)
 
 app.post('/pedido', pedidoController.criarPedido)
+app.get('/pedido/:id', pedidoController.buscarPedido)
 app.get('/pedido', pedidoController.listarPedidos)
 app.put('/pedido/:id', pedidoController.atualizarPedido)
 app.put('/entrega/:id', pedidoController.atualizarEntrega)

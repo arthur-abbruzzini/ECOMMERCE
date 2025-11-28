@@ -54,7 +54,7 @@ function mostrarCarrinho() {
     totalTexto.textContent = `Total: R$ ${total.toFixed(2)}`
 }
 
-// Finalizar compra — envia diretamente para o backend
+// Finalizar compra — redirecionar para página de entrega
 if (btnFinalizar) {
     btnFinalizar.addEventListener('click', () => {
         if (produtos.length === 0) {
@@ -62,45 +62,10 @@ if (btnFinalizar) {
             return
         }
 
-        const token = sessionStorage.getItem('token')
-
-        fetch('http://localhost:3000/pedido', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify({
-                produtos: produtos,
-                entrega: {
-                    cep: '00000-000',
-                    logradouro: 'Entrega Padrão',
-                    numero: 'S/N',
-                    complemento: '',
-                    bairro: 'Centro',
-                    localidade: 'Cidade Padrão',
-                    uf: 'SP'
-                }
-            })
-        })
-        .then(res => {
-            if (res.ok) {
-                return res.json()
-            } else {
-                throw new Error(`Erro HTTP: ${res.status}`)
-            }
-        })
-        .then(dados => {
-            console.log('Compra finalizada:', dados)
-            alert('Compra finalizada com sucesso!')
-            localStorage.removeItem('produtos')
-            produtos = []
-            mostrarCarrinho()
-        })
-        .catch(err => {
-            console.error('Erro na compra:', err)
-            alert('Erro ao processar a compra. Verifique se há estoque suficiente.')
-        })
+        // Mover carrinho para temp e redirecionar para entrega
+        localStorage.setItem('carrinho_temp', JSON.stringify(produtos))
+        localStorage.removeItem('produtos')
+        window.location.href = 'entrega.html'
     })
 }
 

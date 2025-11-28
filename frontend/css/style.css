@@ -72,7 +72,7 @@ body {
 }
 
 .menu a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -89,7 +89,7 @@ body {
 
 /* Produtos */
 .produto {
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 4px;
     padding: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -178,7 +178,7 @@ footer {
     margin-top: 2rem;
 }
 
-p{
+p,a{
     color: black;
 }
 

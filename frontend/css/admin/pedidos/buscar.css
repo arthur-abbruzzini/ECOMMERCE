@@ -1,0 +1,53 @@
+.buscar-pedido-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.buscar-pedido-section input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    width: 200px;
+}
+
+.buscar-pedido-section button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscar-pedido-section button:hover {
+    background-color: #0056b3;
+}
+
+#detalhesPedido {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#detalhesPedido h4, #detalhesPedido h5 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#detalhesPedido p {
+    margin: 0.5rem 0;
+}
+
+#detalhesPedido ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+#detalhesPedido li {
+    margin: 0.25rem 0;
+}

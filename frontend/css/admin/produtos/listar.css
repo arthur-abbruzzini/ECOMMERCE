@@ -1,0 +1,22 @@
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#listaProdutos {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+#listaProdutos p {
+    margin: 0.5rem 0;
+}

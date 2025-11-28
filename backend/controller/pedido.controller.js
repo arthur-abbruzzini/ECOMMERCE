@@ -163,6 +163,37 @@ const atualizarPedido = async (req, res) => {
     }
 }
 
+const buscarPedido = async (req, res) => {
+    const { id } = req.params
+
+    try {
+        const pedido = await Pedido.findByPk(id, {
+            include: [
+                { model: Usuario, as: 'usuarioPedido' },
+                {
+                    model: Entrega,
+                    as: 'entregaPedido',
+                    required: false
+                },
+                {
+                    model: ItemPedido,
+                    as: 'itensPedido',
+                    include: [{ model: Produto, as: 'produtoItem' }]
+                }
+            ]
+        })
+
+        if (!pedido) {
+            return res.status(404).json({ message: 'Pedido não encontrado' })
+        }
+
+        res.status(200).json(pedido)
+    } catch (err) {
+        console.error('Erro ao buscar pedido:', err)
+        res.status(500).json({ message: 'Erro ao buscar pedido' })
+    }
+}
+
 const atualizarEntrega = async (req, res) => {
     const { id } = req.params
     const { statusEntrega, codigoRastreio, dataEstimada } = req.body
@@ -185,4 +216,4 @@ const atualizarEntrega = async (req, res) => {
     }
 }
 
-module.exports = { criarPedido, listarPedidos, atualizarPedido, atualizarEntrega }
+module.exports = { criarPedido, listarPedidos, buscarPedido, atualizarPedido, atualizarEntrega }
