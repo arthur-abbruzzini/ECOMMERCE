@@ -33,7 +33,7 @@ btnLogin.addEventListener('click', (e) => {
             sessionStorage.setItem('token', dados.token)
             res.innerText = "Login realizado com sucesso!"
 
-            // 🔥 REDIRECIONA BASEADO NO TIPO DE USUARIO
+            //  REDIRECIONA BASEADO NO TIPO DE USUARIO
             setTimeout(() => {
                 if (dados.tipo_usuario === 'ADMIN') {
                     location.href = "./html/admin.html"
